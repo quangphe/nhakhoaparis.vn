@@ -8,6 +8,7 @@
         text-align: left;
         margin: 20px 0 10px;
     }
+
     &__box1 {
         &__tabs {
             display: flex;
@@ -15,39 +16,47 @@
             margin: 0;
             padding: 0;
             list-style: none;
+
             .tab {
                 margin: 0;
             }
         }
+
         li {
             padding: 20px !important;
             border: 1px solid #ccc;
+
             &.tns-nav-active {
                 background: #F5F5F5;
                 border: none;
             }
         }
+
         img {
             width: 100%;
             height: auto;
             display: block;
         }
     }
+
     &__box2 {
         &__pic {
             position: relative;
+
             img {
                 width: 100%;
                 height: auto;
                 display: block;
             }
         }
+
         &__ct {
             position: absolute;
             top: 10%;
             width: 370px;
             padding-left: 20px;
         }
+
         &__tt {
             font-size: 30px;
             color: #000;
@@ -55,15 +64,18 @@
             padding-top: 0px;
             margin: 20px 0 10px;
         }
+
         &__subTitle {
             font-style: italic;
             font-size: 15px;
         }
+
         &__more {
             padding-top: 15px;
             display: block;
             color: #000;
             cursor: pointer;
+
             span {
                 background: #E43D3B;
                 color: #fff;
@@ -71,6 +83,7 @@
                 font-weight: 600;
                 border-radius: 30px;
                 padding: 10px 10px 10px 0;
+
                 b {
                     background: #0055A4;
                     padding: 10px 15px;
@@ -79,6 +92,7 @@
             }
         }
     }
+
     &__box3 {
         background: #0165CD;
         min-height: 450px;
@@ -86,12 +100,14 @@
         padding: 20px;
         border-radius: 8px;
         color: #fff;
+
         &__tt {
             text-transform: uppercase;
             font-size: 20px;
             margin-top: 0;
             text-align: center;
         }
+
         select {
             width: 100%;
             text-align: center;
@@ -103,35 +119,43 @@
             font-size: 18px;
             font-weight: 600;
         }
+
         &__item {
             background-color: #fff;
             margin-top: 10px;
             min-height: 190px;
             border-radius: 6px;
             padding: 10px;
+            display: none;
+
             .scrollbar {
                 float: left;
                 height: 150px;
                 width: 100%;
                 overflow-y: scroll;
             }
+
             .force-overflow {
                 min-height: 320px;
             }
         }
+
         &__sub {
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 10px;
+
             .address {
                 width: 50%;
             }
-            .icon__call, 
+
+            .icon__call,
             .icon__time {
                 width: 24%;
                 padding-top: 22px;
                 position: relative;
             }
+
             .icon__call {
                 &::before {
                     background: url(../images/call.webp) center 0 no-repeat;
@@ -145,6 +169,7 @@
                     height: 23px;
                 }
             }
+
             .icon__time {
                 &::before {
                     background: url(../images/lich.webp) center 0 no-repeat;
@@ -159,8 +184,10 @@
                 }
             }
         }
+
         &__form {
             padding: 5px 0;
+
             input {
                 border: none;
                 margin: 4px 0;
@@ -168,8 +195,10 @@
                 width: 100%;
                 border-radius: 8px;
             }
+
             .dkbt {
                 text-align: center;
+
                 input {
                     width: 55%;
                     margin-top: 10px;
@@ -185,14 +214,17 @@
             }
         }
     }
+
     @media (max-width: 1200px) {
         &__box2 {
             &__tt {
                 font-size: 22px;
             }
         }
+
         &__box3 {
             &__sub {
+
                 .icon__call,
                 .icon__time {
                     font-size: 13px;
@@ -200,6 +232,7 @@
             }
         }
     }
+
     @media (max-width: 1024px) {
         &__box3 {
             &__sub {
@@ -207,6 +240,7 @@
                     width: 100%;
                     margin-bottom: 5px;
                 }
+
                 .icon__call,
                 .icon__time {
                     width: 40%;
@@ -214,22 +248,26 @@
             }
         }
     }
+
     @media (max-width: 480px) {
         &__title {
             font-size: 22px;
             padding: 16px 0;
         }
+
         &__box1 {
             li {
                 padding: 8px !important;
             }
         }
+
         &__box2 {
             &__tt {
                 font-size: 17px;
                 margin: 0 0 10px;
             }
         }
+
         &__box3 {
             margin-top: 38px;
         }
@@ -239,4 +277,3 @@
 #commit_1_0_0__box1__tabs-iw {
     margin: 0;
 }
-

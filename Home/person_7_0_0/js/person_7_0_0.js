@@ -1,3 +1,45 @@
+const renderDataPerson = (data, name) => {
+    const mainPerson = data.filter((item) => {
+        return item.name === name;
+    })
+
+    let html = `
+        <div class="slide_item">
+            <div class="person_7_0_0__item">
+                <div class="person_7_0_0__itemChild">
+                    <img width="555" height="280" src="https://nhakhoaparis.vn/${mainPerson[0].pushPs[0].image}" alt="" loading="lazy">
+                    <div class="person_7_0_0__info">
+                        <p class="person_7_0_0__name">${mainPerson[0].pushPs[0].name}</p>
+                        <p class="person_7_0_0__sv">${mainPerson[0].pushPs[0].service}</p>
+                    </div>
+                </div>
+                <div class="person_7_0_0__itemChild">
+                    <img width="555" height="280" src="https://nhakhoaparis.vn/${mainPerson[0].pushPs[1].image}" alt="" loading="lazy">
+                    <div class="person_7_0_0__info">
+                        <p class="person_7_0_0__name">${mainPerson[0].pushPs[1].name}</p>
+                        <p class="person_7_0_0__sv">${mainPerson[0].pushPs[1].service}</p>
+                    </div>
+                </div>
+                <div class="person_7_0_0__itemChild">
+                    <img width="555" height="280" src="https://nhakhoaparis.vn/${mainPerson[0].pushPs[2].image}" alt="" loading="lazy">
+                    <div class="person_7_0_0__info">
+                        <p class="person_7_0_0__name">${mainPerson[0].pushPs[2].name}</p>
+                        <p class="person_7_0_0__sv">${mainPerson[0].pushPs[2].service}</p>
+                    </div>
+                </div>
+                <div class="person_7_0_0__itemChild">
+                    <img width="555" height="280" src="https://nhakhoaparis.vn/${mainPerson[0].pushPs[3].image}" alt="" loading="lazy">
+                    <div class="person_7_0_0__info">
+                        <p class="person_7_0_0__name">${mainPerson[0].pushPs[3].name}</p>
+                        <p class="person_7_0_0__sv">${mainPerson[0].pushPs[3].service}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    document.getElementById('slide_person').innerHTML = html;
+}
+
 // Get API Person
 const getPerson = async () => {
     const person = [];
@@ -18,54 +60,8 @@ const getPerson = async () => {
         });
         person.push({ name: personName[0], pushPs: pushPerson });
     });
-    return person;
-};
+    renderDataPerson(person, "Niềng răng");
 
-const renderDataPerson = (data, name) => {
-    const mainPerson = data.filter((item) => {
-        return item.name === name;
-    })
-
-    let html = `
-        <div class="slide_item">
-            <div class="person_7_0_0__item">
-                <div class="person_7_0_0__itemChild">
-                    <img width="555" height="280" src="https://cdn.nhakhoaparis.vn/${mainPerson[0].pushPs[0].image}" alt="" loading="lazy">
-                    <div class="person_7_0_0__info">
-                        <p class="person_7_0_0__name">${mainPerson[0].pushPs[0].name}</p>
-                        <p class="person_7_0_0__sv">${mainPerson[0].pushPs[0].service}</p>
-                    </div>
-                </div>
-                <div class="person_7_0_0__itemChild">
-                    <img width="555" height="280" src="https://cdn.nhakhoaparis.vn/${mainPerson[0].pushPs[1].image}" alt="" loading="lazy">
-                    <div class="person_7_0_0__info">
-                        <p class="person_7_0_0__name">${mainPerson[0].pushPs[1].name}</p>
-                        <p class="person_7_0_0__sv">${mainPerson[0].pushPs[1].service}</p>
-                    </div>
-                </div>
-                <div class="person_7_0_0__itemChild">
-                    <img width="555" height="280" src="https://cdn.nhakhoaparis.vn/${mainPerson[0].pushPs[2].image}" alt="" loading="lazy">
-                    <div class="person_7_0_0__info">
-                        <p class="person_7_0_0__name">${mainPerson[0].pushPs[2].name}</p>
-                        <p class="person_7_0_0__sv">${mainPerson[0].pushPs[2].service}</p>
-                    </div>
-                </div>
-                <div class="person_7_0_0__itemChild">
-                    <img width="555" height="280" src="https://cdn.nhakhoaparis.vn/${mainPerson[0].pushPs[3].image}" alt="" loading="lazy">
-                    <div class="person_7_0_0__info">
-                        <p class="person_7_0_0__name">${mainPerson[0].pushPs[3].name}</p>
-                        <p class="person_7_0_0__sv">${mainPerson[0].pushPs[3].service}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-    document.getElementById('slide_person').innerHTML = html;
-}
-
-window.onload = async () => {
-    const personMain = await getPerson();
-    renderDataPerson(personMain, "Niềng răng");
     var tabLinks = document.querySelectorAll(".person_7_0_0__tab__item");
     tabLinks.forEach(function (el) {
         el.addEventListener("click", function () {
@@ -74,7 +70,9 @@ window.onload = async () => {
                 el.classList.remove('active');
             })
             el.classList.add('active');
-            renderDataPerson(personMain, element);
+            renderDataPerson(person, element);
         });
     });
-}
+};
+
+getPerson();

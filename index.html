@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nha khoa Paris</title>
+    <link rel="stylesheet" href="https://huudinh.github.io/assets/sass/lib.min.css">
+    <link rel="stylesheet" href="./assets/sass/custom.min.css">
+    <script src="https://huudinh.github.io/assets/js/lib.min.js"></script>
+    <script src="https://huudinh.github.io/assets/js/module.min.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="header_6_0_0"></div>
+    <!-- END HEADER -->
+
+    <!-- SLIDER -->
+    <div id="slider_1_0_5"></div>
+
+    <script src="https://huudinh.github.io/assets/js/tiny-slider.min.js"></script>
+    <script>
+        var slider = tns({
+            container: '.slider',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            lazyload: true,
+            lazyloadSelector: '.tns-lazy',
+            autoHeight: true,
+            nav: false,
+            navPosition: 'bottom',
+            controlsContainer: '#slider-nav',
+        });
+    </script>
+    <!-- END SLIDER -->
+
+    <!-- DOCTOR -->
+    <div id="doctor_4_1_0"></div>
+
+    <style>
+        .doctor_4_1_0__text {
+            padding: 20px 30px 20px 60px;
+            color: #000;
+            border-radius: 8px;
+            text-align: left;
+            margin-top: 80px;
+        }
+    </style>
+    <!-- END DOCTOR -->
+
+    <!-- SERVICE -->
+    <div id="service_9_0_0"></div>
+    <!-- END SERVICE -->
+
+    <!-- ABOUT -->
+    <div id="about_5_0_0"></div>
+    <!-- END ABOUT -->
+
+    <!-- PERSON -->
+    <div id="person_7_0_0"></div>
+    <!-- END PERSON -->
+
+    <!-- VIDEO -->
+    <div id="video_4_1_0"></div>
+    <!-- END VIDEO -->
+
+    <!-- COMMIT -->
+    <div id="commit_1_0_0"></div>
+    <!-- END COMMIT -->
+
+    <!-- NEWS -->
+    <div id="news_13_0_0"></div>
+    <!-- END NEWS -->
+
+    <!-- NEWS -->
+    <div id="news_13_1_0"></div>
+    <!-- END NEWS -->
+
+</body>
+
+<script src="https://nhakhoaparis.vn/css/custom_v2.js?ver=221205"></script>
+<script>
+    renderModule('Header', 'header_6_0_0', '', 'logic');
+    renderModule('Home', 'slider_1_0_5', '', 'logic');
+    renderModule('Home', 'doctor_4_1_0', '', 'logic');
+    renderModule('Home', 'service_9_0_0', '', 'logic');
+    renderModule('Home', 'about_5_0_0', '', '');
+    renderModule('Home', 'person_7_0_0', '', 'logic');
+    renderModule('Home', 'video_4_1_0', '', 'logic');
+    renderModule('Home', 'commit_1_0_0', '', 'logic');
+    renderModule('Home', 'news_13_0_0', '', '');
+    renderModule('Home', 'news_13_1_0', '', '');
+</script>
+
+</html>

@@ -8,26 +8,27 @@ const getVideo = async () => {
     const videoObj = videoJSON.info1.split("\r\n");
     // console.log(videoObj);
     const videoContainer = [];
-    console.log(videoContainer);
+    // console.log(videoContainer);
     videoContainer.push({ imgSrc: videoObj[0], videoTitle: videoObj[1], videoLink: videoObj[2], videoView: videoObj[3] })
     videoJSON.info2.map((item) => {
         const videoData = item.content.split("\r\n");
         // console.log(videoData);
         video.push({ img: videoData[0], title: videoData[1], link: videoData[2], view: videoData[3] });
     });
-    return video; // Trả về mảng video đã được xử lý
+    return { video, videoContainer }; // Trả về mảng video đã được xử lý
 };
 
-const renderVideo = (dataVideo) => {
+const renderVideo = (data) => {
+    console.log(data);
     let html = `
         <a href="">
-            <div class="video_4_1_0__box1__item modal-clip" data-video="${dataVideo.videoLink}" onclick="counterFn()">
+            <div class="video_4_1_0__box1__item modal-clip" data-video="${data.videoLink}" onclick="counterFn()">
             <div class="video_4_1_0__pic">
-                <img width="750" height="421" src="${dataVideo.imgSrc}" alt="${dataVideo.videoTitle}" loading="lazy">
+                <img width="750" height="421" src="${data.imgSrc}" alt="${data.videoTitle}" loading="lazy">
             </div>
             <div class="video_4_1_0__text">
-                <div class="video_4_1_0__ttVideo">${dataVideo.videoTitle}</div>
-                <span>Lượt xem: ${dataVideo.videoView}</span>
+                <div class="video_4_1_0__ttVideo">${data.videoTitle}</div>
+                <span>Lượt xem: ${data.videoView}</span>
             </div>
             </div>
         </a>
@@ -69,7 +70,6 @@ const renderDataVideo = (data) => {
 
 window.onload = async () => {
     const videoMain = await getVideo();
-    renderDataVideo(videoMain);
-    renderVideo(dataVideo[0]);
-    console.log(renderVideo(dataVideo[0]));
+    renderDataVideo(videoMain.video);
+    renderVideo(videoMain.videoContainer);
 };
