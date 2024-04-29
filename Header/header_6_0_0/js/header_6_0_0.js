@@ -43,8 +43,6 @@ const renderMenuItem = (item) => {
     return html;
 };
 
-
-
 // Thêm sự kiện hover/click vào từng item trong danh sách ul
 document.querySelectorAll('.header_6_0_0__box2__menuSub').forEach((item, index) => {
     // let menuSubBox = item.querySelector('.header_6_0_0__box2__menuSubBox');
@@ -85,13 +83,12 @@ document.querySelectorAll('.header_6_0_0__box2__menuSub').forEach((item, index) 
     
 });
 
-
 // Get API Header
 const getHeader = async () => {
-    const response = await fetch(`https://nhakhoaparis.vn/wp-json/wp/v2/pages/59018`);
+    const response = await fetch(`https://nhakhoaparis.vn/wp-json/api/v1/menu/`);
     const data = await response.json();
-    const headerJSON = data.acf.page_field[0].header_sub[0].id_header_6_0_0_sub1;
-    headerData = headerJSON.map(item => {
+    const headerJSON = data.id_header_6_0_0_sub1;
+    headerData = headerJSON.map((item) => {
         const titleMain = item.title.split("\r\n");
         const itemCol = item.col1.split("\r\n\r\n");
         return { title: titleMain[0], group: itemCol };
@@ -100,15 +97,30 @@ const getHeader = async () => {
 
 getHeader();
 
-// Chia row
+// Chia row 
 function colHeader(data) {
-    let html = '';
-    data.forEach(item => {
-        html += `
-            <div class="col-lg-${data.length % 2 === 0 ? '6' : '4'}">
-                <div class="titleChild">${item}</div>
-            </div>
-        `;
-    });
+    data = data[0].split("<p>&nbsp;</p>");
+    let html = ``;
+    if (data.length % 2 === 0) {
+        data.map((item) => {
+            html += `
+                <div class="col-lg-6">
+                    <div class="titleChild">
+                    ${item}
+                    </div>
+                </div>  
+            `
+        })
+    } else {
+        data.map((item) => {
+            html += `
+                <div class="col-lg-4">
+                    <div class="titleChild">
+                    ${item}
+                    </div>
+                </div>  
+            `
+        })
+    }
     return html;
 }
