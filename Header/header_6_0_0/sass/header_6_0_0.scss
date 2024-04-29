@@ -317,6 +317,12 @@
                 border-top: none;
                 display: block;
 
+                &.active {
+                    .header_6_0_0__box2__menuSubBox {
+                        display: block !important;
+                    }
+                }
+
                 .menu-icon {
                     display: block;
                     font-style: normal;
@@ -333,6 +339,7 @@
                 padding: 10px;
                 background-color: #0055A4;
                 border: none;
+                display: none !important;
 
                 .col-lg-6,
                 .col-lg-4 {
@@ -365,7 +372,7 @@
 
             &__title {
                 text-align: left;
-                padding: 5px 0;
+                padding: 5px 12px;
 
                 br {
                     display: none;
@@ -380,6 +387,7 @@
             .container {
                 display: block;
                 width: 270px;
+                padding: 0;
             }
         }
 

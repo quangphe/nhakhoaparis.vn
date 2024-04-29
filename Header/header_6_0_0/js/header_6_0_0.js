@@ -43,46 +43,48 @@ const renderMenuItem = (item) => {
     return html;
 };
 
+
+
 // Thêm sự kiện hover/click vào từng item trong danh sách ul
-document.querySelectorAll('.header_6_0_0__box2__menu li').forEach((item, index) => {
-    let menuSubBox = item.querySelector('.header_6_0_0__box2__menuSubBox');
+document.querySelectorAll('.header_6_0_0__box2__menuSub').forEach((item, index) => {
+    // let menuSubBox = item.querySelector('.header_6_0_0__box2__menuSubBox');
 
-    // Xử lý sự kiện khi di chuột vào mục
-    item.addEventListener('mouseover', function() {
-        // Kiểm tra nếu nội dung chưa được render thì mới render
-        if (!item.getAttribute('data-rendered')) {
-            item.innerHTML = renderMenuItem(headerData[index]);
-            item.setAttribute('data-rendered', 'true');
-        }
-        // Hiển thị menuSubBox khi di chuột vào
-        if (menuSubBox) {
-            menuSubBox.classList.add('show');
-            item.setAttribute('data-rendered', 'true');
-        }
-    });
+    if (screen.width > 1024) {
+        // Xử lý sự kiện khi di chuột vào mục
+        item.addEventListener('mouseover', function() {
+            // Kiểm tra nếu nội dung chưa được render thì mới render
+            if (!item.getAttribute('data-rendered')) {
+                item.innerHTML = renderMenuItem(headerData[index]);
+                item.setAttribute('data-rendered', 'true');
+            }
+        });
+    } 
+    if (screen.width <= 1024) {
+        // Xử lý sự kiện khi click vào mục
+        item.addEventListener('click', function() {
+            if (!item.getAttribute('data-rendered')) {
+                item.innerHTML = renderMenuItem(headerData[index]);
+                item.setAttribute('data-rendered', 'false');
+                item.classList.toggle('active');
+            } else {
+                item.classList.toggle('active');
+            }
 
-    // Xử lý sự kiện khi di chuột ra khỏi mục
-    item.addEventListener('mouseleave', function() {
-        // Ẩn menuSubBox khi di chuột ra khỏi mục và đặt data-rendered về false
-        if (menuSubBox) {
-            menuSubBox.classList.remove('show');
-            item.setAttribute('data-rendered', 'false');
-        }
-    });
+            // Tìm icon trong item và thay đổi nội dung của nó
+            let icon = item.querySelector('.menu-icon');
+            if (icon) {
+                if (icon.textContent === '+') {
+                    icon.textContent = '-';
+                } else {
+                    icon.textContent = '+';
+                }
+            }
+        });
+    }
 
-    // Xử lý sự kiện khi click vào mục
-    item.addEventListener('click', function() {
-        // Kiểm tra nếu nội dung chưa được render thì mới render
-        if (!item.getAttribute('data-rendered')) {
-            item.innerHTML = renderMenuItem(headerData[index]);
-            item.setAttribute('data-rendered', 'true');
-        }
-        // Hiển thị menuSubBox khi click vào mục và không cần kiểm tra data-rendered
-        if (menuSubBox) {
-            menuSubBox.classList.add('show');
-        }
-    });
+    
 });
+
 
 // Get API Header
 const getHeader = async () => {
