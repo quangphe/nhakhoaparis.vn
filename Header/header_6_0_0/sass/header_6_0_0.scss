@@ -445,9 +445,30 @@
         }
 
         &__box2 {
+            &__title {
+                padding: 10px 12px;
+            }
+
             &__menuSub {
+                padding: 0;
+
                 &:hover {
                     border-top: unset;
+                }
+
+                &.active {
+                    .menu-icon {
+                        right: 2px;
+                    }
+                }
+            }
+
+            &__menuSubBox {
+                padding: 0 10px;
+
+                ul li {
+                    padding: 5px 0;
+                    margin-bottom: 0;
                 }
             }
         }
