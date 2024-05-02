@@ -1,8 +1,30 @@
 .header_6_0_0 {
+
     position: fixed;
     z-index: 9;
     width: 100%;
     top: 0;
+
+    &.menufix {
+        box-shadow: 0 1px 25px rgb(0 0 0 / 10%);
+        background: rgba(255, 255, 255, .9);
+
+        .header_6_0_0__boxTop {
+            display: none;
+        }
+
+        .header_6_0_0__box1 {
+            display: none;
+        }
+
+        .header_6_0_0__box2 {
+            background: none;
+        }
+
+        .header_6_0_0__box2__logosb {
+            display: block;
+        }
+    }
 
     &__boxTop {
         background: url(../images/boxtop-bg.webp) center bottom no-repeat;
@@ -153,7 +175,7 @@
         &__menuSub {
             display: flex;
             align-items: center;
-            border-top: 3px solid #EBECF0;
+            border-top: 3px solid transparent;
             padding: 8px 12px;
 
             &:hover {
@@ -409,6 +431,28 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        box-shadow: 0 1px 25px rgba(0, 0, 0, .1);
+
+        &.menufix {
+            .header_6_0_0__box1 {
+                display: block;
+            }
+
+            .header_6_0_0__box2 {
+                background: #fff;
+            }
+        }
+
+        &__box2 {
+            &__menuSub {
+                &:hover {
+                    border-top: unset;
+                }
+            }
+        }
+    }
+
     @media (max-width: 970px) {
         &__boxTop {
             display: none;
@@ -438,14 +482,6 @@
 
         &__iconMid {
             left: 10px;
-        }
-
-        &__box2 {
-            &__menuSub {
-                &:hover {
-                    border-top: unset;
-                }
-            }
         }
     }
 }

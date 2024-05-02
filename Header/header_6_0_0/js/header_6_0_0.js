@@ -9,20 +9,18 @@ document.getElementById("menu-bg").addEventListener("click", () => {
 });
 
 // Xử lý scroll menu
-window.addEventListener("scroll", function() {
-    var headerBoxTop = document.querySelector(".header_6_0_0__boxTop");
-    var headerBox1 = document.querySelector(".header_6_0_0__box1");
-    var headerBox1Left = document.querySelector(".header_6_0_0__box1Left");
-    var headerBox2 = document.querySelector(".header_6_0_0__box2");
-    var headerLogoBox2 = document.querySelector(".header_6_0_0__box2__logosb");
+window.onscroll = function(){ menuFix() };
 
-    headerBoxTop.style.display = window.scrollY > 0 ? "none" : "block";
-    headerBox1.style.display = window.scrollY > 0 ? "none" : "block";
-    headerBox1Left.style.display = window.scrollY > 0 ? "none" : "flex";
-    headerBox2.style.display = "block";
-    headerBox2.style.background = window.scrollY > 0 ? "#fff" : "#ebecf0";
-    headerLogoBox2.style.display = window.scrollY > 0 ? "block" : "none";
-});
+var header = document.getElementById("header_6_0_0__main");
+var sticky = header.offsetTop;
+
+function menuFix() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("menufix");
+    } else {
+        header.classList.remove("menufix");
+    }
+}
 
 // Lưu dữ liệu vào biến headerData
 let headerData = [];
