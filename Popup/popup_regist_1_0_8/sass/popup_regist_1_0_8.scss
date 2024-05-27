@@ -1,0 +1,143 @@
+.popup_regist_1_0_8 {
+    &__overlay {
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        opacity: 0.7;
+    }
+
+    input,
+    textarea {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    &__logo {
+        background: url(../images/logo.png) center 0 no-repeat;
+        height: 70px;
+    }
+
+    &__overlayForm {
+        width: 500px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__form {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+        width: 450px;
+        margin: 0 20px;
+        position: absolute;
+        top: 100px;
+        z-index: 12;
+
+        span {
+            padding: 10px 15px;
+            display: block;
+            color: #000;
+        }
+
+        hr {
+            border-top: 2px solid #9c9c9c;
+            margin: 10px 15px;
+        }
+
+        article {
+            margin: 20px 15px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        background: #fff;
+        color: #0d4f90;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+        img {
+            width: 90px;
+        }
+
+        span {
+            color: #0d4f90;
+            padding: 5px;
+            display: block;
+        }
+    }
+
+    &__closeForm {
+        font-size: 12px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        label {
+            width: 40%;
+            color: #000;
+        }
+
+        input,
+        select {
+            width: 60%;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #707070;
+            padding: 5px 10px;
+        }
+    }
+
+    &__btnSend {
+        text-align: center;
+
+        input {
+            background: #dd4a39;
+            color: #ffff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            padding: 5px 40px;
+            font-weight: 600;
+        }
+    }
+
+    .form-group.invalid input {
+        border: 1px solid red;
+    }
+
+    .form-message {
+        color: red;
+        text-align: left;
+        padding: 0 0 3px 0;
+        font-size: 13px;
+        margin-left: 170px;
+    }
+
+    @media (max-width: 430px) {
+        &__overlayForm {
+            width: 100%;
+        }
+
+        &__form {
+            width: fit-content;
+        }
+    }
+}

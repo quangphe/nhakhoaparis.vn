@@ -17,6 +17,16 @@
         }
     }
 
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
+        color: #0056a2;
+        text-transform: uppercase;
+        padding: 40px 0 30px;
+        text-align: center;
+        display: none;
+    }
+
     &__slide {
         img {
             width: 100%;
@@ -33,7 +43,6 @@
     &__tabs {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         flex-wrap: wrap;
         width: 70%;
         margin: 0 auto 0;
@@ -132,8 +141,18 @@
     @media (max-width: 480px) {
         padding: 10px 0;
 
+        .container::before {
+            top: 0;
+        }
+
         &__box {
             margin-top: 12px;
+        }
+
+        &__title {
+            display: block;
+            font-size: 18px;
+            padding: 25px 0 0;
         }
 
         &__tabs {
@@ -152,7 +171,13 @@
                 text-transform: none;
                 margin-bottom: 0;
                 position: unset;
+                font-size: 16px;
+                font-weight: 400;
             }
+        }
+
+        &__slide {
+            display: none;
         }
     }
 

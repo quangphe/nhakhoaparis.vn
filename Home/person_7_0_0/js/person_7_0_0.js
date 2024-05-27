@@ -7,28 +7,28 @@ const renderDataPerson = (data, name) => {
         <div class="slide_item">
             <div class="person_7_0_0__item">
                 <div class="person_7_0_0__itemChild">
-                    <img width="555" height="280" src="https://nhakhoaparis.vn/${mainPerson[0].pushPs[0].image}" alt="" loading="lazy">
+                    <img width="555" height="280" src="${mainPerson[0].pushPs[0].image}" alt="" loading="lazy">
                     <div class="person_7_0_0__info">
                         <p class="person_7_0_0__name">${mainPerson[0].pushPs[0].name}</p>
                         <p class="person_7_0_0__sv">${mainPerson[0].pushPs[0].service}</p>
                     </div>
                 </div>
                 <div class="person_7_0_0__itemChild">
-                    <img width="555" height="280" src="https://nhakhoaparis.vn/${mainPerson[0].pushPs[1].image}" alt="" loading="lazy">
+                    <img width="555" height="280" src="${mainPerson[0].pushPs[1].image}" alt="" loading="lazy">
                     <div class="person_7_0_0__info">
                         <p class="person_7_0_0__name">${mainPerson[0].pushPs[1].name}</p>
                         <p class="person_7_0_0__sv">${mainPerson[0].pushPs[1].service}</p>
                     </div>
                 </div>
                 <div class="person_7_0_0__itemChild">
-                    <img width="555" height="280" src="https://nhakhoaparis.vn/${mainPerson[0].pushPs[2].image}" alt="" loading="lazy">
+                    <img width="555" height="280" src="${mainPerson[0].pushPs[2].image}" alt="" loading="lazy">
                     <div class="person_7_0_0__info">
                         <p class="person_7_0_0__name">${mainPerson[0].pushPs[2].name}</p>
                         <p class="person_7_0_0__sv">${mainPerson[0].pushPs[2].service}</p>
                     </div>
                 </div>
                 <div class="person_7_0_0__itemChild">
-                    <img width="555" height="280" src="https://nhakhoaparis.vn/${mainPerson[0].pushPs[3].image}" alt="" loading="lazy">
+                    <img width="555" height="280" src="${mainPerson[0].pushPs[3].image}" alt="" loading="lazy">
                     <div class="person_7_0_0__info">
                         <p class="person_7_0_0__name">${mainPerson[0].pushPs[3].name}</p>
                         <p class="person_7_0_0__sv">${mainPerson[0].pushPs[3].service}</p>

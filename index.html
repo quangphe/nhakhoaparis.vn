@@ -18,24 +18,6 @@
 
     <!-- SLIDER -->
     <div id="slider_1_0_5"></div>
-
-    <script src="https://huudinh.github.io/assets/js/tiny-slider.min.js"></script>
-    <script>
-        var slider = tns({
-            container: '.slider',
-            items: 1,
-            slideBy: 'page',
-            autoplay: false,
-            autoplayButtonOutput: false,
-            mouseDrag: true,
-            lazyload: true,
-            lazyloadSelector: '.tns-lazy',
-            autoHeight: true,
-            nav: false,
-            navPosition: 'bottom',
-            controlsContainer: '#slider-nav',
-        });
-    </script>
     <!-- END SLIDER -->
 
     <!-- DOCTOR -->
@@ -85,7 +67,7 @@
 <script src="https://nhakhoaparis.vn/css/custom_v2.js?ver=221205"></script>
 <script>
     renderModule('Header', 'header_6_0_0', '', 'logic');
-    renderModule('Home', 'slider_1_0_5', '', 'logic');
+    renderModule('Home', 'slider_1_0_5', 'data', 'logic');
     renderModule('Home', 'doctor_4_1_0', '', 'logic');
     renderModule('Home', 'service_9_0_0', '', 'logic');
     renderModule('Home', 'about_5_0_0', '', '');

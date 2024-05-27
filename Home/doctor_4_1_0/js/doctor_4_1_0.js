@@ -4,6 +4,8 @@ const renderDataDoctor = (data, name) => {
         return item.name === name;
     });
     let html = `
+        <div class="doctor_4_1_0__bg"></div>
+        <div class="doctor_4_1_0__closePic">×</div>
         <div class="slide_item">
             <div class="doctor_4_1_0__item row">
                 <div class="col-lg-6 doctor_4_1_0__text">
@@ -28,6 +30,12 @@ const renderDataDoctor = (data, name) => {
         </div>
     `;
     document.getElementById('slide_thumb3').innerHTML = html;
+    
+    document.querySelector('.doctor_4_1_0__closePic').addEventListener('click', function() {
+        document.querySelector('.doctor_4_1_0__bg').style.display = 'none';
+        document.querySelector('.slide_item').style.display = 'none';
+        document.querySelector('.doctor_4_1_0__closePic').style.display = 'none';
+    });
 };
 
 // Get API Doctor
@@ -53,6 +61,10 @@ const getDoctor = async () => {
             });
             el.classList.add('active');
             renderDataDoctor(doctor, element);
+
+            document.querySelector('.slide_item').style.display = 'block';
+            document.querySelector('.doctor_4_1_0__bg').style.display = 'block';
+            document.querySelector('.doctor_4_1_0__closePic').style.display = 'flex';
         });
     });
 };
