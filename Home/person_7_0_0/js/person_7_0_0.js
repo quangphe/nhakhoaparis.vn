@@ -46,7 +46,6 @@ const getPerson = async () => {
     const response = await fetch(`https://nhakhoaparis.vn/wp-json/wp/v2/pages/81752`);
     const data = await response.json();
     const personJSON = data.acf.page_field[4].person_sub_fields[0].person_info;
-    // console.log(personJSON);
     personJSON.map((item) => {
         const pushPerson = [];
         const personName = item.name_dv.split("\r\n");

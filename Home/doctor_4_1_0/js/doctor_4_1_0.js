@@ -67,6 +67,9 @@ const getDoctor = async () => {
             document.querySelector('.doctor_4_1_0__closePic').style.display = 'flex';
         });
     });
+
+    const heightBox = document.querySelector('#slide_thumb3').offsetHeight;
+    document.querySelector('#slide_thumb3').style.minHeight = `${heightBox}px`
 };
 
 getDoctor();

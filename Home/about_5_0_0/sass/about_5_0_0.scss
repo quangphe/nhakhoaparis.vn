@@ -126,6 +126,12 @@
     }
 
     @media (max-width: 820px) {
+        .container {
+            &::before {
+                top: -10px;
+            }
+        }
+
         &__box {
             margin-top: -66px;
         }

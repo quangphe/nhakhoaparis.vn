@@ -1,60 +1,60 @@
-const renderVideo = (data) => {
+// const renderVideo = (data) => {
 
-    const link = data[0].videoLink;
-    const parts = link.split("=");
-    const id = parts[1];
+//     const link = data[0].videoLink;
+//     const parts = link.split("=");
+//     const id = parts[1];
 
-    let html = `
-        <a rel="noffollow" onclick="modalVideo('${id}')">
-            <div class="video_4_1_0__box1__item">
-                <div class="video_4_1_0__pic">
-                    <img width="750" height="421" src="https://nhakhoaparis.vn/${data[0].imgSrc}" alt="${data[0].videoTitle}" loading="lazy">
-                </div>
-                <div class="video_4_1_0__text">
-                    <div class="video_4_1_0__ttVideo">${data[0].videoTitle}</div>
-                    <span>Lượt xem: ${data[0].videoView}</span>
-                </div>
-            </div>
-        </a>
-    `;
-    const videoContainer = document.getElementById('video-container');
-    videoContainer.innerHTML = html;
+//     let html = `
+//         <a rel="noffollow" onclick="modalVideo('${id}')">
+//             <div class="video_4_1_0__box1__item">
+//                 <div class="video_4_1_0__pic">
+//                     <img width="750" height="421" src="https://nhakhoaparis.vn/${data[0].imgSrc}" alt="${data[0].videoTitle}" loading="lazy">
+//                 </div>
+//                 <div class="video_4_1_0__text">
+//                     <div class="video_4_1_0__ttVideo">${data[0].videoTitle}</div>
+//                     <span>Lượt xem: ${data[0].videoView}</span>
+//                 </div>
+//             </div>
+//         </a>
+//     `;
+//     const videoContainer = document.getElementById('video-container');
+//     videoContainer.innerHTML = html;
 
-}
+// }
 
-const renderDataVideo = (data) => {
-    if (data && data.length > 0) {
-        let html = '';
-        data.forEach((video) => {
+// const renderDataVideo = (data) => {
+//     if (data && data.length > 0) {
+//         let html = '';
+//         data.forEach((video) => {
 
-            const link = video.link;
-            const parts = link.split("=");
-            const idVideo = parts[1];
-            html += `
-                <div class="video_4_1_0__itemBox2" onclick="modalVideo('${idVideo}')">
-                    <a rel="noffollow">
-                        <div class="video_4_1_0__itemBox2__pic">
-                            <img width="200" height="112" src="https://nhakhoaparis.vn/${video.img}" alt="" loading="lazy">
-                        </div>
-                        <div class="video_4_1_0__itemBox2__content">
-                            <p>${video.title}</p>
-                            <span>Lượt xem: ${video.view}</span>
-                        </div>
-                    </a>
-                </div>
-            `;
-        });
+//             const link = video.link;
+//             const parts = link.split("=");
+//             const idVideo = parts[1];
+//             html += `
+//                 <div class="video_4_1_0__itemBox2" onclick="modalVideo('${idVideo}')">
+//                     <a rel="noffollow">
+//                         <div class="video_4_1_0__itemBox2__pic">
+//                             <img width="200" height="112" src="https://nhakhoaparis.vn/${video.img}" alt="" loading="lazy">
+//                         </div>
+//                         <div class="video_4_1_0__itemBox2__content">
+//                             <p>${video.title}</p>
+//                             <span>Lượt xem: ${video.view}</span>
+//                         </div>
+//                     </a>
+//                 </div>
+//             `;
+//         });
 
-        const forceOverflowElement = document.getElementById('force-overflow');
-        if (forceOverflowElement) {
-            forceOverflowElement.innerHTML = html;
-        } else {
-            console.log("Phần tử 'force-overflow' không tồn tại trong DOM.");
-        }
-    } else {
-        console.log("Không có dữ liệu video để hiển thị.");
-    }
-};
+//         const forceOverflowElement = document.getElementById('force-overflow');
+//         if (forceOverflowElement) {
+//             forceOverflowElement.innerHTML = html;
+//         } else {
+//             console.log("Phần tử 'force-overflow' không tồn tại trong DOM.");
+//         }
+//     } else {
+//         console.log("Không có dữ liệu video để hiển thị.");
+//     }
+// };
 
 const modalVideo = (id) => {
     const html = /*html*/ `
