@@ -1,4 +1,5 @@
 const renderDataService = (data, name) => {
+    console.log(name);
     const mainService = data.filter((item) => {
         return item.name === name;
     })

@@ -74,4 +74,70 @@ const getPerson = async () => {
     });
 };
 
-getPerson();
+// Slider mobile
+if (window.innerWidth <= 768) {
+    const slider = document.querySelector('.person_7_0_0__item');
+    const slideItems = document.querySelectorAll('.person_7_0_0__itemChild');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slideItems.forEach(item => {
+            item.style.display = 'none';
+        });
+        slideItems[index].style.display = 'block';
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideItems.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideItems.length) % slideItems.length;
+        showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+
+    const dotsContainer = document.createElement('div');
+    dotsContainer.classList.add('person_7_0_0__dots');
+
+    // Create dots for each slide
+    slideItems.forEach((item, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('person_7_0_0__dot');
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            currentSlide = index;
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    // Tạo thẻ div để chứa cả hai button
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('person_7_0_0__controls');
+
+    // Tạo button prev
+    const prevButton = document.createElement('button');
+    prevButton.textContent = '❮';
+    prevButton.addEventListener('click', prevSlide);
+    prevButton.classList.add('person_7_0_0__prev'); // Thêm class vào button
+
+    // Tạo button next
+    const nextButton = document.createElement('button');
+    nextButton.textContent = '❯';
+    nextButton.addEventListener('click', nextSlide);
+    nextButton.classList.add('person_7_0_0__next'); // Thêm class vào button
+
+    // Thêm cả hai button vào thẻ div
+    buttonContainer.appendChild(prevButton);
+    buttonContainer.appendChild(nextButton);
+
+    const controlsContainer = document.createElement('div');
+    controlsContainer.classList.add('person_7_0_0__controlsContainer');
+    controlsContainer.appendChild(dotsContainer);
+    controlsContainer.appendChild(buttonContainer);
+
+    // Thêm thẻ div chứa cả hai button vào slider
+    slider.appendChild(controlsContainer);
+}

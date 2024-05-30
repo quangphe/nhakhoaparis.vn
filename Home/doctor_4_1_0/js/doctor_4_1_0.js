@@ -46,6 +46,7 @@ const getDoctor = async () => {
     
     const doctor = doctorJSON.map((item) => {
         const info1_ct = item.info1_ct.split("\r\n");
+        console.log(info1_ct);
         const sub = item.sub.split("\r\n\r\n");
         return { title: info1_ct[0], name: info1_ct[1], image: info1_ct[2], imageMB: info1_ct[3], group: sub };
     });

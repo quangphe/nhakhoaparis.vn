@@ -34,9 +34,10 @@
         }
 
         img {
-            width: 100%;
+            width: 80%;
             height: auto;
             display: block;
+            margin: 0 auto;
         }
     }
 
@@ -71,6 +72,10 @@
         &__subTitle {
             font-style: italic;
             font-size: 15px;
+
+            &.mb {
+                display: none;
+            }
         }
 
         &__more {
@@ -78,6 +83,10 @@
             display: block;
             color: #000;
             cursor: pointer;
+
+            &.mb {
+                display: none;
+            }
 
             span {
                 background: #E43D3B;
@@ -271,12 +280,133 @@
             li {
                 padding: 8px !important;
             }
+
+            img {
+                width: 14%;
+                margin: 26px 5px;
+            }
+
+            &__tabs {
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                    position: relative;
+                    border: none;
+
+                    &:nth-child(1) {
+                        background: url(../images/trang-chu-cam-ket-1.webp) right 0 no-repeat;
+                        background-size: 80%;
+                        height: 125px;
+                        background-color: #f6f6f6;
+
+                        &::after {
+                            content: "Bảo hành trọn đời trên toàn quốc";
+                            position: absolute;
+                            top: 50%;
+                            left: 40%;
+                            transform: translate(-50%, -50%);
+                            width: 40%;
+                            font-size: 14px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        background: url(../images/trang-chu-cam-ket-2.webp) right 0 no-repeat;
+                        background-size: 80%;
+                        height: 125px;
+                        background-color: #f6f6f6;
+
+                        &::after {
+                            content: "100% bác sĩ là thành viên Hiệp hội Nha khoa thẩm mỹ Châu Âu";
+                            position: absolute;
+                            top: 50%;
+                            left: 40%;
+                            transform: translate(-50%, -50%);
+                            width: 40%;
+                            font-size: 14px;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        background: url(../images/trang-chu-cam-ket-3.webp) right 0 no-repeat;
+                        background-size: 80%;
+                        height: 125px;
+                        background-color: #f6f6f6;
+
+                        &::after {
+                            content: "Hội chẩn đánh giá chuyên môn bởi hệ thống Bác sĩ trên 8 CN";
+                            position: absolute;
+                            top: 50%;
+                            left: 40%;
+                            transform: translate(-50%, -50%);
+                            width: 40%;
+                            font-size: 14px;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        background: url(../images/trang-chu-cam-ket-4.webp) right 0 no-repeat;
+                        background-size: 80%;
+                        height: 125px;
+                        background-color: #f6f6f6;
+
+                        &::after {
+                            content: "Ứng dụng công nghệ 3D thiết kế nụ cười chuẩn tỷ lệ vàng";
+                            position: absolute;
+                            top: 50%;
+                            left: 40%;
+                            transform: translate(-50%, -50%);
+                            width: 40%;
+                            font-size: 14px;
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        background: url(../images/trang-chu-cam-ket-5.webp) right 0 no-repeat;
+                        background-size: 80%;
+                        height: 125px;
+                        background-color: #f6f6f6;
+
+                        &::after {
+                            content: "Quy trình nha khoa an toàn - không đau";
+                            position: absolute;
+                            top: 50%;
+                            left: 40%;
+                            transform: translate(-50%, -50%);
+                            width: 40%;
+                            font-size: 14px;
+                        }
+                    }
+
+                    &.tab {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
         }
 
         &__box2 {
             &__tt {
                 font-size: 17px;
                 margin: 0 0 10px;
+            }
+
+            &__subTitle {
+                text-align: center;
+                padding: 10px 0 0 0;
+
+                &.mb {
+                    display: block;
+                }
+            }
+
+            &__more {
+                text-align: center;
+
+                &.mb {
+                    display: block;
+                }
             }
         }
 
@@ -472,295 +602,6 @@
 
         &__header {
             padding: 0 8px;
-        }
-    }
-}
-
-
-.commit_1_0_0 {
-    &__title {
-        font-size: 26px;
-        font-weight: 600;
-        color: #0055A4;
-        text-transform: uppercase;
-        padding: 40px 0 15px;
-        text-align: left;
-        margin: 20px 0 10px;
-    }
-
-    &__box1 {
-        &__tabs {
-            display: flex;
-            justify-content: space-between;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-
-            .tab {
-                margin: 0;
-            }
-        }
-
-        li {
-            padding: 20px !important;
-            border: 1px solid #ccc;
-            width: 100%;
-
-            &.active {
-                background: #F5F5F5;
-                border: none;
-            }
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-    }
-
-    &__box2 {
-        &__item {
-            position: relative;
-        }
-
-        &__pic {
-            img {
-                width: 100%;
-                height: auto;
-                display: block;
-            }
-        }
-
-        &__ct {
-            position: absolute;
-            top: 10%;
-            width: 370px;
-            padding-left: 20px;
-        }
-
-        &__tt {
-            font-size: 30px;
-            color: #000;
-            padding-right: 30px;
-            padding-top: 0px;
-            margin: 20px 0 10px;
-        }
-
-        &__subTitle {
-            font-style: italic;
-            font-size: 15px;
-        }
-
-        &__more {
-            padding-top: 15px;
-            display: block;
-            color: #000;
-            cursor: pointer;
-
-            span {
-                background: #E43D3B;
-                color: #fff;
-                font-size: 17px;
-                font-weight: 600;
-                border-radius: 30px;
-                padding: 10px 10px 10px 0;
-
-                b {
-                    background: #0055A4;
-                    padding: 10px 15px;
-                    border-radius: 30px;
-                }
-            }
-        }
-    }
-
-    &__box3 {
-        background: #0165CD;
-        min-height: 450px;
-        margin-top: 70px;
-        padding: 20px;
-        border-radius: 8px;
-        color: #fff;
-
-        &__tt {
-            text-transform: uppercase;
-            font-size: 20px;
-            margin-top: 0;
-            text-align: center;
-        }
-
-        select {
-            width: 100%;
-            text-align: left;
-            text-align-last: center;
-            padding: 5px;
-            background-color: #6DCFF6;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        &__item {
-            background-color: #fff;
-            margin-top: 10px;
-            min-height: 190px;
-            border-radius: 6px;
-            padding: 10px;
-
-            .scrollbar {
-                float: left;
-                height: 150px;
-                width: 100%;
-                overflow-y: scroll;
-            }
-
-            .force-overflow {
-                min-height: 320px;
-            }
-        }
-
-        &__sub {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-
-            .address {
-                width: 50%;
-            }
-
-            .icon__call,
-            .icon__time {
-                width: 24%;
-                padding-top: 22px;
-                position: relative;
-            }
-
-            .icon__call {
-                &::before {
-                    background: url(../images/call.webp) center 0 no-repeat;
-                    background-size: 100%;
-                    position: absolute;
-                    top: 0px;
-                    left: 10px;
-                    display: block;
-                    content: "";
-                    width: 23px;
-                    height: 23px;
-                }
-            }
-
-            .icon__time {
-                &::before {
-                    background: url(../images/lich.webp) center 0 no-repeat;
-                    background-size: 100%;
-                    position: absolute;
-                    top: 0px;
-                    left: 18px;
-                    display: block;
-                    content: "";
-                    width: 16px;
-                    height: 25px;
-                }
-            }
-        }
-
-        &__form {
-            padding: 5px 0;
-
-            input {
-                border: none;
-                margin: 4px 0;
-                padding: 10px 12px;
-                width: 100%;
-                border-radius: 8px;
-            }
-
-            .dkbt {
-                text-align: center;
-
-                input {
-                    width: max-content;
-                    margin-top: 10px;
-                    text-transform: uppercase;
-                    background: #e43d3b;
-                    color: #fff;
-                    outline: unset;
-                    font-size: 16px;
-                    padding: 6px 15px;
-                    border-radius: 25px;
-                    transition: 0.4s;
-                }
-            }
-
-            .form-message {
-                color: red;
-                font-size: 12px;
-            }
-
-            .form-group.invalid input {
-                border: 1px solid red;
-            }
-        }
-    }
-
-    @media (max-width: 1200px) {
-        &__box2 {
-            &__tt {
-                font-size: 22px;
-            }
-        }
-
-        &__box3 {
-            &__sub {
-
-                .icon__call,
-                .icon__time {
-                    font-size: 13px;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 1024px) {
-        &__box3 {
-            &__sub {
-                .address {
-                    width: 100%;
-                    margin-bottom: 5px;
-                }
-
-                .icon__call,
-                .icon__time {
-                    width: 40%;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 480px) {
-        &__title {
-            font-size: 22px;
-            padding: 16px 0;
-            text-align: center;
-        }
-
-        &__box1 {
-            li {
-                padding: 8px !important;
-            }
-        }
-
-        &__box2 {
-            &__tt {
-                font-size: 17px;
-                margin: 0 0 10px;
-            }
-        }
-
-        &__box3 {
-            margin-top: 38px;
         }
     }
 }

@@ -29,338 +29,106 @@ document.querySelector('.commit_1_0_0__box3__form input[name="website"]').value 
         }
     });
 
-// Data tabs
-const itemsWithHTML = [
-    {
-        html: `
-            <div class="commit_1_0_0__box2__item">
-                <div class="commit_1_0_0__box2__pic">
-                    <img src="images/trang-chu-cam-ket-1.webp" alt="" loading="lazy">
-                </div>
-                <div class="commit_1_0_0__box2__ct">
-                    <div class="commit_1_0_0__box2__tt">
-                        Bảo hành trọn đời trên toàn quốc
-                    </div>
-                    <div class="commit_1_0_0__box2__subTitle">
-                        Liên hệ chuyên gia tư vấn miễn phí
-                    </div>
-                    <a href="" class="commit_1_0_0__box2__more popup_regist btnnktv">
-                        <span>
-                            <b>Đăng ký tư vấn</b>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box2__item">
-                <div class="commit_1_0_0__box2__pic">
-                    <img src="images/trang-chu-cam-ket-2.webp" alt="" loading="lazy">
-                </div>
-                <div class="commit_1_0_0__box2__ct">
-                    <div class="commit_1_0_0__box2__tt">
-                        100% bác sĩ là thành viên Hiệp hội Nha khoa thẩm mỹ Châu Âu
-                    </div>
-                    <div class="commit_1_0_0__box2__subTitle">
-                        Liên hệ chuyên gia tư vấn miễn phí
-                    </div>
-                    <a href="" class="commit_1_0_0__box2__more popup_regist btnnktv">
-                        <span>
-                            <b>Đăng ký tư vấn</b>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box2__item">
-                <div class="commit_1_0_0__box2__pic">
-                    <img src="images/trang-chu-cam-ket-3.webp" alt="" loading="lazy">
-                </div>
-                <div class="commit_1_0_0__box2__ct">
-                    <div class="commit_1_0_0__box2__tt">
-                        Hội chẩn đánh giá chuyên môn bởi hệ thống Bác sĩ trên 8 CN
-                    </div>
-                    <div class="commit_1_0_0__box2__subTitle">
-                        Liên hệ chuyên gia tư vấn miễn phí
-                    </div>
-                    <a href="" class="commit_1_0_0__box2__more popup_regist btnnktv">
-                        <span>
-                            <b>Đăng ký tư vấn</b>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box2__item">
-                <div class="commit_1_0_0__box2__pic">
-                    <img src="images/trang-chu-cam-ket-4.webp" alt="" loading="lazy">
-                </div>
-                <div class="commit_1_0_0__box2__ct">
-                    <div class="commit_1_0_0__box2__tt">
-                        Ứng dụng công nghệ 3D thiết kế nụ cười chuẩn tỷ lệ vàng
-                    </div>
-                    <div class="commit_1_0_0__box2__subTitle">
-                        Liên hệ chuyên gia tư vấn miễn phí
-                    </div>
-                    <a href="" class="commit_1_0_0__box2__more popup_regist btnnktv">
-                        <span>
-                            <b>Đăng ký tư vấn</b>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box2__item">
-                <div class="commit_1_0_0__box2__pic">
-                    <img src="images/trang-chu-cam-ket-5.webp" alt="" loading="lazy">
-                </div>
-                <div class="commit_1_0_0__box2__ct">
-                    <div class="commit_1_0_0__box2__tt">
-                        Quy trình nha khoa an toàn - không đau
-                    </div>
-                    <div class="commit_1_0_0__box2__subTitle">
-                        Liên hệ chuyên gia tư vấn miễn phí
-                    </div>
-                    <a href="" class="commit_1_0_0__box2__more popup_regist btnnktv">
-                        <span>
-                            <b>Đăng ký tư vấn</b>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        `
-    }
-];
-
-// Data address
-const dataAddress = [
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op1">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 110-112 Bà Triệu, Hoàn Kiếm, Hà Nội</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 12 Thái Thịnh, Đống Đa, Hà Nội</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op2">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 179C, Đường 3/2, P.11, Q.10</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 97 Cộng Hòa, P4, Q.Tân Bình</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">87 Nguyễn Thái Học, P. Cầu Ông Lãnh, Q. 1, TP
-                                HCM</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op3">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 261-263 đường Hoàng Diệu, Phường Nam Dương,
-                                Q. Hải Châu, Đà Nẵng</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op4">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 386 Tô Hiệu, Phường Hồ Nam, Lê Chân, Hải
-                                Phòng</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op5">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 143, Nguyễn Văn Cừ, TP. Vinh</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op6">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Shop house 6 - 7, KĐT Times Garden, đường Lê
-                                Thánh Tông, Hạ Long, Quảng Ninh</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op7">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 688A, Đường Cách mạng Tháng Tám, P. Chánh
-                                Nghĩa, TP. Thủ Dầu Một, Bình Dương</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op8">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 519-521 Ngô Gia Tự - Phường Tiền An - Thành
-                                phố Bắc Ninh</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-    {
-        html: `
-            <div class="commit_1_0_0__box3__item" id="op9">
-                <div class="scrollbar" id="style-11">
-                    <div class="force-overflow">
-                        <div class="commit_1_0_0__box3__sub">
-                            <a href="#" class="address">Số 103 đường Nguyễn Trãi, Phường Ba Đình, Thanh
-                                Hóa</a>
-                            <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
-                            <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `
-    },
-];
-
-// Lấy danh sách các tab và nội dung tương ứng
-const tabContentsContainer = document.getElementById('commit_1_0_0__box2');
-
-// Hiển thị nội dung của object đầu tiên trong mảng khi trang web được tải
-tabContentsContainer.innerHTML = itemsWithHTML[0].html;
-
-const tabs = document.querySelectorAll('.commit_1_0_0__box1__tabs .tab');
-
-// Gán sự kiện click cho mỗi tab
-tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        // Xóa lớp active khỏi tất cả các tab
-        tabs.forEach(tab => {
-            tab.classList.remove('active');
-        });
-
-        // Thêm lớp active cho tab được click
-        tab.classList.add('active');
-
-        // Hiển thị nội dung tương ứng với tab được click
-        tabContentsContainer.innerHTML = itemsWithHTML[index].html;
+const renderDataCommit = (data, title) => {
+    // console.log(data);
+    const nameTab = data.filter((item) => {
+        return item.title === title;
     });
-});
+    let html = `
+        <div class="commit_1_0_0__box2__item">
+            <div class="commit_1_0_0__box2__pic">
+                <img src="${nameTab[0].image}" alt="" loading="lazy">
+            </div>
+            <div class="commit_1_0_0__box2__ct">
+                <div class="commit_1_0_0__box2__tt">
+                    ${nameTab[0].title}
+                </div>
+                <div class="commit_1_0_0__box2__subTitle">
+                    ${nameTab[0].desc}
+                </div>
+                <a href="#" class="commit_1_0_0__box2__more popup_regist btnnktv">
+                    <span>
+                        <b>Đăng ký tư vấn</b>
+                    </span>
+                </a>
+            </div>
+        </div>
+    `;
+    document.getElementById('commit_1_0_0__box2').innerHTML = html;
+} 
 
-
-// Hàm showFirstItem được gọi khi trang web được tải
-function showFirstItem() {
-    const listContainer = document.querySelector('.commit_1_0_0__box3__list');
-    // Hiển thị đối tượng đầu tiên từ mảng dataAddress
-    listContainer.innerHTML = dataAddress[0].html;
-    popupCall();
-    popupRegist();
+const renderDataAddress = (data, cityObj) => {
+    const nameCity = data.filter((item) => {
+        return item.cityObj === cityObj;
+    });
+    let html = '';
+    nameCity.map((itemAdd) => {
+        html+= `           
+            <div class="commit_1_0_0__box3__sub">
+                <a href="#" class="address">${itemAdd.addressCity}</a>
+                <a href="#" class="icon__call popup_caller popupCall">Hotline</a>
+                <a href="#" class="icon__time popup_regist popupRegist">Lịch hẹn</a>
+            </div>
+        `
+    })
+    
+    document.getElementById('commit_1_0_0__box3__item').innerHTML = html;
 }
 
-// Gọi hàm showFirstItem khi trang web được tải
-document.addEventListener('DOMContentLoaded', showFirstItem);
+// Get API Person
+const getCommit = async () => {
+    const commit = [];
+    const response = await fetch(`https://nhakhoaparis.vn/wp-json/wp/v2/pages/81752`);
+    const data = await response.json();
+    // console.log(data);
+    const commitJSON = data.acf.page_field[6].commit_sub_fields[0].info1;
+    // console.log(commitJSON);
+    commitJSON.map((item) => {
+        const commitObj = item.content1.split("\r\n");
+        // console.log(commitObj);
+        commit.push({ icon: commitObj[0], title: commitObj[1], desc: commitObj[2], image: commitObj[3] });
+    });
 
-// Hàm showHide được gọi khi chọn một option từ dropdown list
-function showHide() {
-    const selectBox = document.getElementById('select-box');
-    const selectedValue = selectBox.value;
-    const listContainer = document.getElementById('commit_1_0_0__box3__list');
+    const cityAddress = [];
+    const addressJSON = data.acf.page_field[6].commit_sub_fields[0].contact_info;
+    // console.log(addressJSON);
+    const cityObj = data.acf.page_field[6].commit_sub_fields[0].contact_info.contact_city_name;
+    addressJSON.map((item) => {
+        const addressObj = item.contact_city_data.map((itemAddress) => {
+            const address = itemAddress.content.split("\r\n");
+            // console.log(address);
+            cityAddress.push({ addressCity: address[0], link: address[1], cityObj: item.contact_city_name })
+        })
+    });
 
-    // Xóa nội dung trước đó
-    listContainer.innerHTML = '';
+    renderDataAddress(cityAddress, "Hà Nội");
+    var selectAddress = document.querySelector(".commit_1_0_0__box3__select");
+        selectAddress.addEventListener ("change", function (e) {
+                const element = e.target.value;
+                renderDataAddress(cityAddress, element);
+            });
+            popupCall();
+            popupRegist();
 
-    // Tìm đối tượng dữ liệu tương ứng
-    const selectedData = dataAddress.find(data => data.html.includes(`id="${selectedValue}"`));
+    if (window.innerWidth > 600) {
+        renderDataCommit(commit, "Bảo hành trọn đời trên toàn quốc");
 
-    // Thêm nội dung HTML vào container danh sách
-    if (selectedData) {
-        listContainer.innerHTML = selectedData.html;
+        var tabLinks = document.querySelectorAll(".commit_1_0_0__box1__tabs .tab");
+        tabLinks.forEach(function (el) {
+            el.addEventListener("click", function () {
+                const element = el.getAttribute('data-id');
+                tabLinks.forEach(function (el) {
+                    el.classList.remove('active');
+                })
+                el.classList.add('active');
+                renderDataCommit(commit, element);
+            });
+        });
     }
+    
+};
 
-    popupCall();
-    popupRegist();
-}
+getCommit();
 
 //  Popup Call
 const popup_call_1_1_0 = `
@@ -579,3 +347,4 @@ function popupRegist() {
         })
     });
 }
+
