@@ -1,5 +1,5 @@
 const renderDataService = (data, name) => {
-    console.log(name);
+    console.log(data);
     const mainService = data.filter((item) => {
         return item.name === name;
     })
@@ -11,7 +11,7 @@ const renderDataService = (data, name) => {
                     <div class="service_9_0_0__pic picChildren">
                         <img width="353" height="395" src="https://nhakhoaparis.vn/${mainService[0].pushSv[0].imgPic}" alt="" loading="lazy">
                         <div class="service_9_0_0__icon">
-                            <img width="71" height="71" src="https://nhakhoaparis.vn/${mainService[0].pushSv[0].icon}" alt="" loading="lazy">
+                            <img width="71" height="71" src="https://nhakhoaparis.vn/${mainService[0].pushSv[0].icon}" alt="icon" loading="lazy">
                         </div>
                     </div>
                     <div class="service_9_0_0__text">
@@ -23,7 +23,7 @@ const renderDataService = (data, name) => {
                     <div class="service_9_0_0__pic">
                         <img width="353" height="395" src="https://nhakhoaparis.vn/${mainService[0].pushSv[1].imgPic}" alt="" loading="lazy">
                         <div class="service_9_0_0__icon">
-                            <img width="70" height="71" src="https://nhakhoaparis.vn/${mainService[0].pushSv[1].icon}" alt="" loading="lazy">
+                            <img width="70" height="71" src="https://nhakhoaparis.vn/${mainService[0].pushSv[1].icon}" alt="icon" loading="lazy">
                         </div>
                     </div>
                     <div class="service_9_0_0__text">
@@ -35,7 +35,7 @@ const renderDataService = (data, name) => {
                     <div class="service_9_0_0__pic picChildren">
                         <img width="353" height="395" src="https://nhakhoaparis.vn/${mainService[0].pushSv[2].imgPic}" alt="" loading="lazy">
                         <div class="service_9_0_0__icon">
-                            <img width="71" height="71" src="https://nhakhoaparis.vn/${mainService[0].pushSv[2].icon}" alt="" loading="lazy">
+                            <img width="71" height="71" src="https://nhakhoaparis.vn/${mainService[0].pushSv[2].icon}" alt="icon" loading="lazy">
                         </div>
                     </div>
                     <div class="service_9_0_0__text">

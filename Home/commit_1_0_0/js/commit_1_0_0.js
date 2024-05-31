@@ -37,7 +37,7 @@ const renderDataCommit = (data, title) => {
     let html = `
         <div class="commit_1_0_0__box2__item">
             <div class="commit_1_0_0__box2__pic">
-                <img src="${nameTab[0].image}" alt="" loading="lazy">
+                <img src="${nameTab[0].image}" alt="${nameTab[0].title}" loading="lazy">
             </div>
             <div class="commit_1_0_0__box2__ct">
                 <div class="commit_1_0_0__box2__tt">
