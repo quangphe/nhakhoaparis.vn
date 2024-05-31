@@ -67,6 +67,10 @@
     }
 
     @media (max-width: 430px) {
+        &__title {
+            font-size: 22px;
+        }
+
         &__box {
             gap: 10px;
         }

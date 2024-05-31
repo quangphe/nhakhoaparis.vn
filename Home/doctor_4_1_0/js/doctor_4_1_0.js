@@ -42,17 +42,15 @@ const renderDataDoctor = (data, name) => {
 const getDoctor = async () => {
     const response = await fetch(`https://nhakhoaparis.vn/wp-json/wp/v2/pages/81752`);
     const data = await response.json();
-    console.log(data);
     const doctorJSON = data.acf.page_field[1].doctor_sub_fields[0].info1;
     
     const doctor = doctorJSON.map((item) => {
         const info1_ct = item.info1_ct.split("\r\n");
-        console.log(info1_ct);
         const sub = item.sub.split("\r\n\r\n");
         return { title: info1_ct[0], name: info1_ct[1], image: info1_ct[2], imageMB: info1_ct[3], group: sub };
     });
 
-    renderDataDoctor(doctor, "PHILIPPE TAROT");
+    // renderDataDoctor(doctor, "PHILIPPE TAROT");
 
     var tabLinks = document.querySelectorAll(".doctor_4_1_0__tab__item");
     tabLinks.forEach(function (el) {

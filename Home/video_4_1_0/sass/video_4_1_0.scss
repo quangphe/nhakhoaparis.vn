@@ -231,6 +231,12 @@
     }
 
     @media (max-width: 430px) {
+        height: 756px;
+
+        &__title {
+            font-size: 22px;
+        }
+
         &__pic {
             height: 232px;
         }
@@ -250,6 +256,10 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 430px) {
+        height: 740px;
     }
 
     @media (max-width: 375px) {

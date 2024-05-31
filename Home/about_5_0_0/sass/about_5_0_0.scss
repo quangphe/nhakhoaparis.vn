@@ -162,13 +162,13 @@
         }
 
         &__tabs {
-            width: 90%;
+            width: 93%;
             gap: 14px;
             flex-wrap: wrap;
         }
 
         &__tabItem {
-            width: 48%;
+            width: calc(50% - 7px);
 
             p {
                 visibility: visible;
@@ -190,10 +190,6 @@
     @media (max-width: 390px) {
         &__tabs {
             justify-content: center;
-        }
-
-        &__tabItem {
-            width: 46%;
         }
     }
 }
