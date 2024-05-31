@@ -42,6 +42,7 @@ const renderDataDoctor = (data, name) => {
 const getDoctor = async () => {
     const response = await fetch(`https://nhakhoaparis.vn/wp-json/wp/v2/pages/81752`);
     const data = await response.json();
+    console.log(data);
     const doctorJSON = data.acf.page_field[1].doctor_sub_fields[0].info1;
     
     const doctor = doctorJSON.map((item) => {

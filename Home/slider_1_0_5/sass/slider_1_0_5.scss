@@ -2,70 +2,60 @@
     position: relative;
 
     img {
-        transition: 0.2s all ease-in-out;
         width: 100%;
-        height: auto;
-        display: flex;
-        animation: slideshow__fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-
-        &.ani {
-            opacity: 1;
-            visibility: visible;
-        }
+        height: 100%;
+        display: block;
+        animation: slideshow__fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 
-    .pagination {
-        position: absolute;
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
+    &__pc {
+        display: block;
+    }
 
-        &__item {
-            background-color: #ffffff80;
-            width: 25px;
-            height: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 100%;
-            margin: 0 5px;
-            line-height: 1;
-            cursor: pointer;
-
-            &.active {
-                background-color: #fff;
-            }
-        }
+    &__mb {
+        display: none;
     }
 
     @media (max-width: 768px) {
-        .pagination {
-            bottom: 5px;
+        &__pc {
+            display: none;
+        }
 
-            &__item {
-                width: 20px;
-                height: 20px;
-                font-size: 14px;
-            }
+        &__mb {
+            display: block;
+        }
+    }
+
+    .inner__slide {
+        a {
+            display: block;
+        }
+    }
+
+    .item__btn {
+        width: 45px;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+
+        &.prev {
+            left: 0;
+        }
+
+        &.next {
+            right: 0;
         }
     }
 }
 
-.item__btn {
-    width: 45px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
-
-    &.prev {
-        left: 0;
+@keyframes slideshow__fade {
+    from {
+        opacity: 0;
     }
 
-    &.next {
-        right: 0;
+    to {
+        opacity: 1;
     }
 }
