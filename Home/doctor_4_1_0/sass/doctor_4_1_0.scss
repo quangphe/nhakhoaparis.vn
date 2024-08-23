@@ -182,7 +182,8 @@
 
         &__tab {
             &__item {
-                width: calc(50% - 7px);
+                width: 50%;
+                padding: 0px 8px 8px 8px;
             }
         }
 
@@ -300,8 +301,18 @@
     }
 
     @media (max-width: 360px) {
+        &__title {
+            font-size: 16px;
+        }
+
         &__tabItem {
             height: 100px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        &__title {
+            font-size: 13px;
         }
     }
 }
@@ -323,7 +334,7 @@
 
     @media (max-width: 768px) {
         flex-wrap: wrap;
-        gap: 14px;
+        gap: unset;
     }
 
     @media (max-width: 430px) {

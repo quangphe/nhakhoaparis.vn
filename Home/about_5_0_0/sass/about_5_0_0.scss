@@ -6,7 +6,7 @@
         &::before {
             content: "";
             display: block;
-            background: url(../images/line.webp) center 0 no-repeat;
+            background: url('https://nhakhoaparis.vn/wp-content/themes/ParisBrand2024/Module/Home/service_9_0_0/images/line.jpg') center 0 no-repeat;
             position: absolute;
             left: 0;
             top: -15px;
@@ -162,13 +162,13 @@
         }
 
         &__tabs {
-            width: 93%;
-            gap: 14px;
+            width: 90%;
+            gap: unset;
             flex-wrap: wrap;
         }
 
         &__tabItem {
-            width: calc(50% - 7px);
+            width: 48%;
 
             p {
                 visibility: visible;
@@ -190,6 +190,11 @@
     @media (max-width: 390px) {
         &__tabs {
             justify-content: center;
+        }
+
+        &__tabItem {
+            width: 50%;
+            padding: 0 8px 8px 8px;
         }
     }
 }

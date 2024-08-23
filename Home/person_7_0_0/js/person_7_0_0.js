@@ -1,6 +1,6 @@
 const renderDataPerson = (data, name) => {
-    const mainPerson = data.filter((item) => {
-        return item.name === name;
+    const mainPerson = data.filter((item, index) => {
+        return index === Number(name);
     })
 
     let html = `
@@ -45,9 +45,14 @@ const getPerson = async () => {
     const person = [];
     const response = await fetch(`https://nhakhoaparis.vn/wp-json/wp/v2/pages/81752`);
     const data = await response.json();
-    // console.log(data);
-    const personJSON = data.acf.page_field[4].person_sub_fields[0].person_info;
-    personJSON.map((item) => {
+
+    // Lấy Dữ liệu person_7_0_0 từ API theo điều kiện
+    const personJSON = data.acf.group_page_field.body_custom.filter((item) => {
+        return item.acf_fc_layout == "person_7_0_0"
+    });
+    // console.log(personJSON[0].person_info);
+
+    personJSON[0].person_info.map((item) => {
         const pushPerson = [];
         const personName = item.name_dv.split("\r\n");
         // console.log(personName);
@@ -60,7 +65,7 @@ const getPerson = async () => {
         });
         person.push({ name: personName[0], pushPs: pushPerson });
     });
-    renderDataPerson(person, "Niềng răng");
+    renderDataPerson(person, 0);
 
     var tabLinks = document.querySelectorAll(".person_7_0_0__tab__item");
     tabLinks.forEach(function (el) {

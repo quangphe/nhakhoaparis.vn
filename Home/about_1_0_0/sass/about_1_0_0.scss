@@ -1,0 +1,50 @@
+.about_1_0_0 {
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__boxLeft {
+        width: 40%;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #0056a2;
+    }
+
+    &__desc {
+        font-size: 1rem;
+    }
+
+    &__content {
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    &__boxRight {
+        flex: 1;
+    }
+
+    &__pic {
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    @media (max-width: 430px) {
+        &__box {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__boxLeft {
+            width: 100%;
+        }
+    }
+}

@@ -35,7 +35,7 @@
             display: block;
             position: absolute;
             z-index: 1;
-            background: url(../images/icon.webp) center no-repeat;
+            background: url(https://nhakhoaparis.vn/wp-content/themes/ParisBrand2024/Module/Home/video_4_1_0/images/icon.jpg) center no-repeat;
             background-size: 100%;
             width: 60px;
             height: 70px;
@@ -105,7 +105,7 @@
                 display: block;
                 position: absolute;
                 z-index: 1;
-                background: url(../images/icon.webp) center no-repeat;
+                background: url(https://nhakhoaparis.vn/wp-content/themes/ParisBrand2024/Module/Home/video_4_1_0/images/icon.jpg) center no-repeat;
                 background-size: 100%;
                 width: 35px;
                 height: 40px;
@@ -200,8 +200,6 @@
     }
 
     @media (max-width: 767px) {
-        height: 715px;
-
         &__title {
             padding: 20px 0 10px;
         }
@@ -209,11 +207,17 @@
         &__box2 {
             .force-overflow {
                 flex-wrap: wrap;
+                gap: unset;
+            }
+
+            .scrollbar {
+                height: auto;
             }
         }
 
         &__itemBox2 {
-            width: 49%;
+            width: 50%;
+            padding: 0 5px;
 
             &:nth-child(5) {
                 display: none;
@@ -231,8 +235,6 @@
     }
 
     @media (max-width: 430px) {
-        height: 756px;
-
         &__title {
             font-size: 22px;
         }
@@ -256,10 +258,6 @@
                 }
             }
         }
-    }
-
-    @media (max-width: 430px) {
-        height: 740px;
     }
 
     @media (max-width: 375px) {

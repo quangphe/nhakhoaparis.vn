@@ -5,7 +5,7 @@
         &::before {
             content: "";
             display: block;
-            background: url(../images/line.webp) center 0 no-repeat;
+            background: url('https://nhakhoaparis.vn/wp-content/themes/ParisBrand2024/Module/Home/service_9_0_0/images/line.jpg') center 0 no-repeat;
             position: absolute;
             left: 0;
             top: -15px;
@@ -27,38 +27,38 @@
     &__content {
         cursor: pointer;
         position: relative;
-        padding-bottom: 60px;
+        padding-bottom: 155px;
 
-        &:hover {
-            .service_9_0_0__pic::before {
-                visibility: visible;
-                opacity: 1;
-            }
+        // &:hover {
+        //     .service_9_0_0__pic::before {
+        //         visibility: visible;
+        //         opacity: 1;
+        //     }
 
-            .service_9_0_0__text {
-                visibility: visible;
-                opacity: 1;
-            }
-        }
+        //     .service_9_0_0__text {
+        //         visibility: visible;
+        //         opacity: 1;
+        //     }
+        // }
     }
 
     &__pic {
         position: relative;
 
-        &::before {
-            content: "";
-            background-color: rgba(61, 126, 210, 0.7);
-            width: 100%;
-            border-radius: 8px;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            transition: 0.3s;
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0s, opacity 0.4s linear;
-        }
+        // &::before {
+        //     content: "";
+        //     background-color: rgba(61, 126, 210, 0.7);
+        //     width: 100%;
+        //     border-radius: 8px;
+        //     height: 100%;
+        //     top: 0;
+        //     left: 0;
+        //     position: absolute;
+        //     transition: 0.3s;
+        //     visibility: hidden;
+        //     opacity: 0;
+        //     transition: visibility 0s, opacity 0.4s linear;
+        // }
 
         img {
             width: 100%;
@@ -68,7 +68,7 @@
         }
 
         &.picChildren {
-            width: 320px;
+            width: 100%;
             height: 360px;
             display: block;
             margin: 0 auto;
@@ -80,7 +80,7 @@
         width: 100%;
         margin: 0px auto 0;
         position: absolute;
-        bottom: -30px;
+        bottom: -75px;
 
         img {
             width: 20%;
@@ -88,46 +88,58 @@
         }
     }
 
-    &__text {
+    &__itemTitle {
         text-align: center;
-        font-size: 17px;
-        position: absolute;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        color: #fff;
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.4s linear;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 50px;
 
-        b {
-            text-transform: uppercase;
-            border: 2px solid #fff;
-            border-left: 0;
-            border-right: 0;
-            padding: 10px 0;
-            margin-bottom: 20px;
-            display: block;
-            font-size: 20px;
-        }
-
-        ul {
+        li {
             list-style: none;
-            padding: 0;
-
-            li {
-                font-size: 16px;
-            }
-        }
-
-        .read_more {
-            color: #fff;
-            background-color: #e43d3b;
-            padding: 8px 20px;
-            border-radius: 25px;
         }
     }
+
+    // &__text {
+    //     text-align: center;
+    //     font-size: 17px;
+    //     position: absolute;
+    //     top: 42%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width: 100%;
+    //     color: #fff;
+    //     visibility: hidden;
+    //     opacity: 0;
+    //     transition: visibility 0s, opacity 0.4s linear;
+
+    //     b {
+    //         text-transform: uppercase;
+    //         border: 2px solid #fff;
+    //         border-left: 0;
+    //         border-right: 0;
+    //         padding: 10px 0;
+    //         margin-bottom: 20px;
+    //         display: block;
+    //         font-size: 20px;
+    //     }
+
+    //     ul {
+    //         list-style: none;
+    //         padding: 0;
+
+    //         li {
+    //             font-size: 16px;
+    //         }
+    //     }
+
+    //     .read_more {
+    //         color: #fff;
+    //         background-color: #e43d3b;
+    //         padding: 8px 20px;
+    //         border-radius: 25px;
+    //     }
+    // }
 
     &__tabItem {
         text-align: center;
@@ -146,60 +158,26 @@
     }
 
     @media (max-width: 1180px) {
-        &__pic {
-            &.picChildren {
-                width: 248px;
-                height: 277px;
-            }
+        &__icon {
+            bottom: 5px;
         }
 
-        &__text {
-            top: 36%;
-
-            ul {
-                li {
-                    font-size: 13px;
-                }
-            }
-
-            b {
-                font-size: 16px;
-            }
+        &__content {
+            padding-bottom: 100px;
         }
     }
 
     @media (max-width: 990px) {
-        &__text {
-            top: 40%;
-            width: 90%;
+        &__icon {
+            bottom: 82px;
+        }
 
-            b {
-                font-size: 18px;
-            }
-
-            ul {
-                margin-bottom: 2px;
-
-                li {
-                    font-size: 13px;
-                }
-            }
-
-            .read_more {
-                padding: 5px 15px;
-                font-size: 14px;
-            }
+        &__content {
+            padding-bottom: 32px;
         }
 
         &__tabItem {
             width: 105px;
-        }
-
-        &__pic {
-            &.picChildren {
-                width: 100%;
-                height: 88%;
-            }
         }
 
         .row {
@@ -225,12 +203,13 @@
 
         &__tab {
             &__item {
-                width: calc(50% - 7px);
+                width: 50%;
+                margin-bottom: 15px;
             }
         }
 
         &__tabItem {
-            width: 90%;
+            width: 80%;
             display: block;
             margin: 0 auto;
         }
@@ -255,6 +234,6 @@
 
     @media (max-width: 768px) {
         flex-wrap: wrap;
-        gap: 14px;
+        gap: unset;
     }
 }

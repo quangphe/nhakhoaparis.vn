@@ -28,7 +28,7 @@
             width: 100%;
 
             &.active {
-                background: #F5F5F5;
+                background-color: #F5F5F5;
                 border: none;
             }
         }
@@ -169,7 +169,7 @@
 
             .icon__call {
                 &::before {
-                    background: url(../images/call.webp) center 0 no-repeat;
+                    background: url(https://nhakhoaparis.vn/wp-content/themes/ParisBrand2024/Module/Home/commit_1_0_0/images/call.jpg) center 0 no-repeat;
                     background-size: 100%;
                     position: absolute;
                     top: 0px;
@@ -183,7 +183,7 @@
 
             .icon__time {
                 &::before {
-                    background: url(../images/lich.webp) center 0 no-repeat;
+                    background: url(https://nhakhoaparis.vn/wp-content/themes/ParisBrand2024/Module/Home/commit_1_0_0/images/lich.jpg) center 0 no-repeat;
                     background-size: 100%;
                     position: absolute;
                     top: 0px;
@@ -289,95 +289,25 @@
             &__tabs {
                 flex-direction: column;
 
+                &Title {
+                    position: absolute;
+                    top: 50%;
+                    left: 40%;
+                    transform: translate(-50%, -50%);
+                    width: 40%;
+                    font-size: 14px;
+                }
+
                 li {
                     width: 100%;
                     position: relative;
                     border: none;
 
-                    &:nth-child(1) {
-                        background: url(../images/trang-chu-cam-ket-1.webp) right 0 no-repeat;
-                        background-size: 80%;
-                        height: 125px;
-                        background-color: #f6f6f6;
-
-                        &::after {
-                            content: "Bảo hành trọn đời trên toàn quốc";
-                            position: absolute;
-                            top: 50%;
-                            left: 40%;
-                            transform: translate(-50%, -50%);
-                            width: 40%;
-                            font-size: 14px;
-                        }
-                    }
-
-                    &:nth-child(2) {
-                        background: url(../images/trang-chu-cam-ket-2.webp) right 0 no-repeat;
-                        background-size: 80%;
-                        height: 125px;
-                        background-color: #f6f6f6;
-
-                        &::after {
-                            content: "100% bác sĩ là thành viên Hiệp hội Nha khoa thẩm mỹ Châu Âu";
-                            position: absolute;
-                            top: 50%;
-                            left: 40%;
-                            transform: translate(-50%, -50%);
-                            width: 40%;
-                            font-size: 14px;
-                        }
-                    }
-
-                    &:nth-child(3) {
-                        background: url(../images/trang-chu-cam-ket-3.webp) right 0 no-repeat;
-                        background-size: 80%;
-                        height: 125px;
-                        background-color: #f6f6f6;
-
-                        &::after {
-                            content: "Hội chẩn đánh giá chuyên môn bởi hệ thống Bác sĩ trên 8 CN";
-                            position: absolute;
-                            top: 50%;
-                            left: 40%;
-                            transform: translate(-50%, -50%);
-                            width: 40%;
-                            font-size: 14px;
-                        }
-                    }
-
-                    &:nth-child(4) {
-                        background: url(../images/trang-chu-cam-ket-4.webp) right 0 no-repeat;
-                        background-size: 80%;
-                        height: 125px;
-                        background-color: #f6f6f6;
-
-                        &::after {
-                            content: "Ứng dụng công nghệ 3D thiết kế nụ cười chuẩn tỷ lệ vàng";
-                            position: absolute;
-                            top: 50%;
-                            left: 40%;
-                            transform: translate(-50%, -50%);
-                            width: 40%;
-                            font-size: 14px;
-                        }
-                    }
-
-                    &:nth-child(5) {
-                        background: url(../images/trang-chu-cam-ket-5.webp) right 0 no-repeat;
-                        background-size: 80%;
-                        height: 125px;
-                        background-color: #f6f6f6;
-
-                        &::after {
-                            content: "Quy trình nha khoa an toàn - không đau";
-                            position: absolute;
-                            top: 50%;
-                            left: 40%;
-                            transform: translate(-50%, -50%);
-                            width: 40%;
-                            font-size: 14px;
-                        }
-                    }
+                    background-size: 80%;
+                    background-position: right;
+                    background-repeat: no-repeat;
+                    height: 125px;
+                    background-color: #f6f6f6;
 
                     &.tab {
                         margin-bottom: 5px;
@@ -442,7 +372,6 @@
     }
 
     &__box {
-
         article {
             background: #fff;
             z-index: 10;

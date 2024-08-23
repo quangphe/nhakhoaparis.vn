@@ -46,10 +46,11 @@ const renderSlide_1_0_5 = async () => {
     }
 }
 
-renderSlide_1_0_5();
+window.addEventListener("resize", function() {
+    renderSlide_1_0_5();
+});
 
-
-function runSlide_1_0_5({ data = [], position = '', isPagination = false, isControl = false, time = 6000, controlPrev, controlNext, first }) {
+function runSlide_1_0_5({ data = [], position = '', isPagination = false, isControl = false, time = 6000000, controlPrev, controlNext, first }) {
     try {
         let index = 0;
 
