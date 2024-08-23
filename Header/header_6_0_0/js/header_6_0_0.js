@@ -77,8 +77,6 @@ document.querySelectorAll('.header_6_0_0__box2__menuSub').forEach((item, index) 
             }
         });
     }
-
-    
 });
 
 // Get API Header
